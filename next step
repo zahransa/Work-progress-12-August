@@ -1,0 +1,20 @@
+ the next steps are:
+        - check the orientation of the three OPM axes by displaying each axis as a small vector for each OPM location: this is to be sure that there is no bug which should explain your first results which are rather strange
+        - set the distance sensor scalp to 3 mm for OPM and not 2 cm
+        - check at which step of the computation process the sensor sensitivity is used. This parameter is very important for getting correct OPM simulations
+        - recompute the leadfield matrix and sensitivity maps after these steps
+
+What we should expect in terms of results (at least theoretically): 
+        - more sensitivity for OPM X and Y for lambda min (which corresponds to radially oriented sources, generating tangential magnetic field) compared to SQUID
+        - similar sensitivity for OPM Z and SQUIDs for lambda max et lambda 2 (which correspond to tangentially oriented sources, generating radial magnetic field). May be this sensitivity should be even nbetter for OPM Z as they are closer to scalp than SQUIDs
+
+Additionnal metrics that I have to compute (see Livanainen's paper):
+- signal power
+- primary and volume currents contributions
+- Topography overlap (CA and PPE)
+- sensors lead fields (Field of view)
+- total information (the same or another one such as entropy ?)
+- Point spread function
+- other metrics also
+
+Also, we have to think about a method to combine the three axes of our OPM: PCA, tensor, other...
